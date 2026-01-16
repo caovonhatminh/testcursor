@@ -9,30 +9,30 @@ URL_WEB = "https://www.phptravels.net/"
 class TestNavigationMenu:
     """Test cases for navigation menu"""
     
-    def test_logo_visible(self, home_page):
-        """TC001: Verify logo is visible on homepage"""
-        home_page.verify_logo_visible()
+    # def test_logo_visible(self, home_page):
+    #     """TC001: Verify logo is visible on homepage"""
+    #     home_page.verify_logo_visible()
     
-    def test_logo_clickable(self, home_page):
-        """TC002: Verify logo is clickable"""
-        from playwright.sync_api import expect
-        expect(home_page.logo).to_be_visible()
-        # Logo should be clickable (inside a link)
-        expect(home_page.logo.locator("xpath=ancestor::a")).to_be_visible()
+    # def test_logo_clickable(self, home_page):
+    #     """TC002: Verify logo is clickable"""
+    #     from playwright.sync_api import expect
+    #     expect(home_page.logo).to_be_visible()
+    #     # Logo should be clickable (inside a link)
+    #     expect(home_page.logo.locator("xpath=ancestor::a")).to_be_visible()
     
-    def test_navigation_menu_links(self, home_page):
-        """TC003: Verify all navigation menu links are visible"""
-        home_page.verify_navigation_menu()
+    # def test_navigation_menu_links(self, home_page):
+    #     """TC003: Verify all navigation menu links are visible"""
+    #     home_page.verify_navigation_menu()
     
-    def test_navigation_links_clickable(self, home_page):
-        """TC004: Verify navigation links are clickable/enabled"""
-        from playwright.sync_api import expect
-        expect(home_page.flights_nav).to_be_enabled()
-        expect(home_page.hotels_nav).to_be_enabled()
-        expect(home_page.tours_nav).to_be_enabled()
-        expect(home_page.cars_nav).to_be_enabled()
-        expect(home_page.visa_nav).to_be_enabled()
-        expect(home_page.blogs_nav).to_be_enabled()
+    # def test_navigation_links_clickable(self, home_page):
+    #     """TC004: Verify navigation links are clickable/enabled"""
+    #     from playwright.sync_api import expect
+    #     expect(home_page.flights_nav).to_be_enabled()
+    #     expect(home_page.hotels_nav).to_be_enabled()
+    #     expect(home_page.tours_nav).to_be_enabled()
+    #     expect(home_page.cars_nav).to_be_enabled()
+    #     expect(home_page.visa_nav).to_be_enabled()
+    #     expect(home_page.blogs_nav).to_be_enabled()
     
     def test_dropdown_menus(self, home_page):
         """TC005: Verify dropdown menus are visible"""

@@ -25,11 +25,11 @@ jobs:
           playwright install --with-deps
       
       - name: Run test cicd
-        run: pytest Practice/tests/test_cicd.py --html=report.html --self-contained-html
+        run: pytest Practice/tests/test_cicd.py
 
-      - name: Upload report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: report.html
+      # - name: Upload report
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: playwright-report
+      #     path: report.html
