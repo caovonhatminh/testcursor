@@ -25,7 +25,7 @@ jobs:
           playwright install --with-deps
       
       - name: Run test cicd
-        run: pytest Practice - branch/tests/test_cicd.py --html=report.html --self-contained-html
+        run: pytest Practice/tests/test_cicd.py --html=report.html --self-contained-html
 
       - name: Upload report
         if: always()
