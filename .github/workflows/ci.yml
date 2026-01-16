@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt 
           playwright install --with-deps
       
-      - name: Run test homepage
+      - name: Run test cicd
         run: pytest tests/test_cicd.py --html=report.html --self-contained-html
 
       - name: Upload report
