@@ -25,7 +25,7 @@ jobs:
           playwright install --with-deps
       
       - name: Run test homepage
-        run: pytest tests/test_cicd.py -q --html=report.html --self-contained-html
+        run: pytest tests/test_cicd.py --html=report.html --self-contained-html
 
       - name: Upload report
         if: always()
